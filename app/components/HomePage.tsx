@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Download } from 'lucide-react'
 import Image from 'next/image'
 
 export default function HomePage() {
@@ -11,6 +12,7 @@ export default function HomePage() {
                     transition={{ duration: 0.5 }}
                     className="mb-8 relative inline-block"
                     whileHover={{ scale: 1.05 }}
+                    style={{ zIndex: 1}}
                 >
                     <Image
                         src={"/Foto-Perfil.jpg"}
@@ -21,30 +23,46 @@ export default function HomePage() {
                     />
                 </motion.div>
                 <motion.h1
-                className="text-4xl font-bold mb-4 text-gray-600"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                    className="text-4xl font-bold mb-4 text-gray-600"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
                 >
-                Tomás Gutiérrez
+                    Tomás Gutiérrez
                 </motion.h1>
                 <motion.p
-                className="text-xl mb-8 text-gray-400"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-xl mb-8 text-gray-400"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                Full Stack Developer
+                    Full Stack Developer
                 </motion.p>
                 <motion.p
-                className="max-w-2xl mx-auto text-gray-400"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                    className="max-w-2xl mx-auto text-gray-400"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                Passionate Full Stack Developer with extensive experience in JavaScript, React, Node.js, and PHP.
-                Dedicated to creating efficient, scalable, and user-friendly web applications.
+                    Passionate Full Stack Developer with extensive experience in JavaScript, React, Node.js, and PHP.
+                    Dedicated to creating efficient, scalable, and user-friendly web applications.
                 </motion.p>
+                <motion.div
+                    className="mt-14"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <motion.a
+                        href="/TomasGutierrezResume.pdf" // Enlace al CV
+                        className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        download
+                    >
+                        Download Resume
+                        <Download className="ml-2 w-6 h-6" />
+                    </motion.a>
+                </motion.div>
             </div>
         </section>
     )

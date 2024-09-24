@@ -89,22 +89,28 @@ export const technologies = [
 
 export const experiences = [
     {
-        company: 'Tech Innovators Inc.',
-        role: 'Senior Full Stack Developer',
-        period: 'Jan 2021 - Present',
-        description: 'Lead development of scalable web applications using React, Node.js, and MongoDB. Implemented CI/CD pipelines and mentored junior developers.',
+        company: 'Stock Contol',
+        role: 'Fullstack Developer',
+        period: 'May 2024 - Present',
+        description: "I developed a comprehensive web application for stock and sales management. This application was designed to optimize inventory and sales operations for a company, providing detailed and accurate financial reports. My role included developing server-side services, building the client-side user interface, and managing the entire database.",
     },
     {
-        company: 'WebSolutions Co.',
-        role: 'Full Stack Developer',
-        period: 'Jun 2018 - Dec 2020',
-        description: 'Developed and maintained multiple client projects using PHP, Laravel, and MySQL. Collaborated with design team to implement responsive UI/UX designs.',
+        company: 'Tstyle',
+        role: 'Fullstack Developer',
+        period: 'Jan 2024 - May 2024',
+        description: "I developed an e-commerce platform for managing stock and sales for Tstyle, an automotive aesthetics business in San Juan, Argentina. The platform was built using the Medusa.js framework and the MERN stack, providing a seamless solution for inventory management and sales tracking. My responsibilities included developing server-side services, designing the client-side interface, and managing the backend database to ensure efficient operations and accurate sales reporting.",
     },
     {
-        company: 'StartUp Nexus',
-        role: 'Junior Web Developer',
-        period: 'Sep 2016 - May 2018',
-        description: 'Assisted in the development of web applications using JavaScript and jQuery. Gained experience in version control with Git and agile methodologies.',
+        company: 'LavApp',
+        role: 'Fullstack Developer',
+        period: 'Oct 2023 - Jan 2024',
+        description: "I developed a comprehensive web application from scratch for the organization of a car wash located in Buenos Aires, Argentina. This application encompassed the development of both the backend, frontend services, and user interface, as well as the management of the database. I implemented a responsive design that allowed the application to be used on various devices with the same user experience.",
+    },
+    {
+        company: 'ComercioSJ',
+        role: 'Fullstack Developer',
+        period: 'Nov 2022 - Nov 2023',
+        description: "I developed a marketplace specifically designed to meet the needs of local businesses in San Juan, Argentina, as well as the expectations of their customers. As part of my experience as a full-stack developer, I led the creation of a complete web application from scratch, encompassing the implementation of server-side services, building the client-side user interface, and comprehensive database",
     },
 ]
 

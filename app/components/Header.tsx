@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <header className="sticky top-0 bg-gray-800 text-white py-4 z-1000">
+        <header className="sticky top-0 bg-gray-800 text-white py-4 z-50">
             <nav className="container mx-auto px-4 flex justify-between items-center">
                 <Link href="/" className="text-2xl font-bold">
                 {/* TG */}
