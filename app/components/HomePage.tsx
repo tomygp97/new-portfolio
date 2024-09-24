@@ -4,7 +4,13 @@ import Image from 'next/image'
 
 export default function HomePage() {
     return (
-        <section className="bg-gray-100 py-20 h-screen" id='home'>
+        <section
+            className="relative bg-gray-100 py-20 h-screen bg-cover bg-center"
+            id='home'
+            style={{
+                backgroundImage: 'url("/background.jpg")',
+            }}
+        >
             <div className="container mx-auto px-4 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -23,7 +29,8 @@ export default function HomePage() {
                     />
                 </motion.div>
                 <motion.h1
-                    className="text-4xl font-bold mb-4 text-gray-600"
+                    // className="text-4xl font-bold mb-4 text-gray-600"
+                    className="text-4xl font-bold mb-4 text-gray-100"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -31,7 +38,8 @@ export default function HomePage() {
                     Tomás Gutiérrez
                 </motion.h1>
                 <motion.p
-                    className="text-xl mb-8 text-gray-400"
+                    // className="text-xl mb-8 text-gray-400"
+                    className="text-xl mb-8 text-gray-300"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -39,7 +47,8 @@ export default function HomePage() {
                     Full Stack Developer
                 </motion.p>
                 <motion.p
-                    className="max-w-2xl mx-auto text-gray-400"
+                    // className="max-w-2xl mx-auto text-gray-400"
+                    className="max-w-2xl mx-auto text-gray-300"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
