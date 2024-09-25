@@ -89,7 +89,7 @@ export const technologies = [
 
 export const experiences = [
     {
-        company: 'Stock Contol',
+        company: 'Stock Control',
         role: 'Fullstack Developer',
         period: 'May 2024 - Present',
         description: "I developed a comprehensive web application for stock and sales management. This application was designed to optimize inventory and sales operations for a company, providing detailed and accurate financial reports. My role included developing server-side services, building the client-side user interface, and managing the entire database.",
