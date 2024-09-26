@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { contactInfo } from '../constants'
-import SectionTitle from './SectionTitle'
+import SectionTitle from '../components/SectionTitle'
 
 export default function Contact() {
     return (

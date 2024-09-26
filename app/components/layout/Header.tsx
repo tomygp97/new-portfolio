@@ -55,6 +55,7 @@ export default function Header() {
                 <ul className={`md:flex space-x-4 ${isMenuOpen ? 'flex' : 'hidden'} flex-col md:flex-row md:items-center absolute md:static top-full right-0 w-full md:w-auto ${isMenuOpen ? 'bg-[#3E3B3C]' : 'md:bg-transparent'}`}>
                     <li className="text-center"><Link href="#home" className="underline-hover py-2">Home</Link></li>
                     <li className="text-center"><Link href="#technologies" className="underline-hover py-2">Technologies</Link></li>
+                    <li className="text-center"><Link href="#projects" className="underline-hover py-2">Projects</Link></li>
                     <li className="text-center"><Link href="#experience" className="underline-hover py-2">Experience</Link></li>
                     <li className="text-center"><Link href="#contact" className="underline-hover py-2">Contact</Link></li>
                 </ul>

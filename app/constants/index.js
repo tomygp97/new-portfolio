@@ -1,5 +1,5 @@
 import Image from "next/image"
-
+import comerciosanJuanBackground from "../../assets/projects/comerciosj-background.png"
 
 export const technologies = [
     {
@@ -144,4 +144,33 @@ export const contactInfo = [
         // href: 'mailto:tomasgp1997@gmail.com',
         username: 'tomasgp1997@gmail.com',
     },
+]
+
+export const projects = [
+    {
+        title: "ComercioSJ",
+        description: "marketplace specifically designed to meet the needs of local businesses in San Juan, Argentina.",
+        technologies: ["React.js 18", "Next.js 13", "Material-UI", "Firebase", "Redux"],
+        githubUrl: "https://github.com/nico98gon/comercio-san-juan-nextjs",
+        demoUrl: "https://www.comerciosanjuan.ar/",
+        // imageUrl: "./assets/projects/comerciosj-background.png"
+        imageUrl: comerciosanJuanBackground
+    },
+    {
+        title: "LavApp",
+        description: "web application for the organization of a car wash located in Buenos Aires.",
+        technologies: ["React.js 18", "Next.js 14", "Node.js", "Express.js", "MongoDB"],
+        githubUrl: "https://github.com/tomygp97/new-portfolio", //TODO: Agregar URL real del repo
+        demoUrl: "https://www.tomasgdev.com.ar/", //TODO: Agregar URL real del demo
+        imageUrl: "/placeholder.svg?height=300&width=400"
+    },
+    {
+        title: "Jobify",
+        description: "web application for the organization of a car wash located in Buenos Aires.",
+        technologies: ["React.js 18", "Next.js 14", "Node.js", "Express.js", "MongoDB"],
+        githubUrl: "https://github.com/tomygp97/new-portfolio", //TODO: Agregar URL real del repo
+        demoUrl: "https://www.tomasgdev.com.ar/", //TODO: Agregar URL real del demo
+        imageUrl: "/placeholder.svg?height=300&width=400"
+    },
+    // Add more projects as needed
 ]

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { experiences } from "../constants";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../components/SectionTitle";
 
 
 export default function WorkExperience() {

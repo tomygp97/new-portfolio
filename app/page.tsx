@@ -1,10 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import HomePage from './components/HomePage'
-import Technologies from './components/Technologies'
-import Contact from './components/Contact'
-import WorkExperience from './components/WorkExperiencec'
+import HomePage from './sections/Home'
+import Technologies from './sections/Technologies'
+import Contact from './sections/Contact'
+import WorkExperience from './sections/WorkExperiencec'
+import Projects from './sections/Projects'
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     >
       <HomePage />
       <Technologies />
+      <Projects />
       <WorkExperience />
       <Contact />
     </motion.div>

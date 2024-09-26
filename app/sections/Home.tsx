@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
 import Image from 'next/image'
 
-export default function HomePage() {
+export default function Home() {
     return (
         <section
             className="relative bg-gray-100 py-20 h-screen bg-cover bg-center"

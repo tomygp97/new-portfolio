@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { technologies } from '../constants';
-import SectionTitle from './SectionTitle';
+import SectionTitle from '../components/SectionTitle';
 
 function TechIcon({ icon, name }: { icon: React.ReactNode; name: string }) {
     return (
