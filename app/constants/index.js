@@ -1,5 +1,8 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
+
 import comerciosanJuanBackground from "../../assets/projects/comerciosj-background.png"
+import jobifyBackground from "../../assets/projects/jobify-background.png"
+import lavappBackground from "../../assets/projects/lavapp-background.png"
 
 export const technologies = [
     {
@@ -153,24 +156,23 @@ export const projects = [
         technologies: ["React.js 18", "Next.js 13", "Material-UI", "Firebase", "Redux"],
         githubUrl: "https://github.com/nico98gon/comercio-san-juan-nextjs",
         demoUrl: "https://www.comerciosanjuan.ar/",
-        // imageUrl: "./assets/projects/comerciosj-background.png"
-        imageUrl: comerciosanJuanBackground
+        imageUrl: comerciosanJuanBackground.src
     },
     {
         title: "LavApp",
         description: "web application for the organization of a car wash located in Buenos Aires.",
         technologies: ["React.js 18", "Next.js 14", "Node.js", "Express.js", "MongoDB"],
-        githubUrl: "https://github.com/tomygp97/new-portfolio", //TODO: Agregar URL real del repo
-        demoUrl: "https://www.tomasgdev.com.ar/", //TODO: Agregar URL real del demo
-        imageUrl: "/placeholder.svg?height=300&width=400"
+        githubUrl: "https://github.com/tomygp97/lavadero", //TODO: Agregar URL real del repo
+        demoUrl: "https://lavadero-eta.vercel.app/", //TODO: Agregar URL real del demo
+        imageUrl: lavappBackground.src
     },
     {
         title: "Jobify",
         description: "web application for the organization of a car wash located in Buenos Aires.",
         technologies: ["React.js 18", "Next.js 14", "Node.js", "Express.js", "MongoDB"],
-        githubUrl: "https://github.com/tomygp97/new-portfolio", //TODO: Agregar URL real del repo
-        demoUrl: "https://www.tomasgdev.com.ar/", //TODO: Agregar URL real del demo
-        imageUrl: "/placeholder.svg?height=300&width=400"
+        githubUrl: "https://github.com/tomygp97/Jobify", //TODO: Agregar URL real del repo
+        demoUrl: "https://jobify-082g.onrender.com/",
+        imageUrl: jobifyBackground.src
     },
     // Add more projects as needed
 ]

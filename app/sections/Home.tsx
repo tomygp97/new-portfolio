@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 export default function Home() {
     return (
