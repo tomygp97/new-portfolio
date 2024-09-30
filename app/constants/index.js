@@ -82,6 +82,18 @@ export const technologies = [
         ),
     },
     {
+        name: 'Postman',
+        icon: (
+            <Image src="/postman-icon-svgrepo-com.svg" alt="Postman Logo" width={48} height={48} />
+        ),
+    },
+    {
+        name: 'Docker',
+        icon: (
+            <Image src="/docker-svgrepo-com.svg" alt="Docker Logo" width={48} height={48} />
+        ),
+    },
+    {
         name: 'Git',
         icon: (
             <Image src="/git-icon-svgrepo-com.svg" alt="Git Logo" width={48} height={48} />
