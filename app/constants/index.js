@@ -180,7 +180,7 @@ export const projects = [
     },
     {
         title: "Jobify",
-        description: "web application for the organization of a car wash located in Buenos Aires.",
+        description: "platform designed to allow users to search for and create job listings.",
         technologies: ["React.js 18", "Next.js 14", "Node.js", "Express.js", "MongoDB"],
         githubUrl: "https://github.com/tomygp97/Jobify", //TODO: Agregar URL real del repo
         demoUrl: "https://jobify-082g.onrender.com/",
