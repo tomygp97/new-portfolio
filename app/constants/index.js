@@ -104,9 +104,15 @@ export const technologies = [
 
 export const experiences = [
     {
+        company: 'Nodos Hub',
+        role: 'Backend Developer',
+        period: 'Oct 2024 - Present',
+        description: "I am participating in a backend development internship at Nodos Hub, a software factory based in San Juan, Argentina. My responsibilities include designing and implementing RESTful APIs and optimizing database structures using Laravel.",
+    },
+    {
         company: 'Stock Control',
         role: 'Fullstack Developer',
-        period: 'May 2024 - Present',
+        period: 'May 2024 - Aug 2024',
         description: "I developed a comprehensive web application for stock and sales management. This application was designed to optimize inventory and sales operations for a company, providing detailed and accurate financial reports. My role included developing server-side services, building the client-side user interface, and managing the entire database.",
     },
     {
