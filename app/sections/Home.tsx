@@ -47,14 +47,12 @@ export default function Home() {
                     Full Stack Developer
                 </motion.p>
                 <motion.p
-                    // className="max-w-2xl mx-auto text-gray-400"
                     className="max-w-2xl mx-auto text-gray-300"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    Passionate Full Stack Developer with extensive experience in JavaScript, React, Node.js, and PHP.
-                    Dedicated to creating efficient, scalable, and user-friendly web applications.
+                    Full Stack Developer with 2+ years of experience specializing in Golang, Laravel, Next.js, React.js and Node.js. Skilled in building scalable and efficient web applications, with a strong focus on backend development. Currently working as a Backend Developer at Nodos Hub, a software factory in Argentina.
                 </motion.p>
                 <motion.div
                     className="mt-14"
