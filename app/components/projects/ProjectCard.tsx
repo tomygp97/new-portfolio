@@ -8,7 +8,7 @@ import { Project as ProjectInterface } from '@/app/types/project'
 export default function ProjectCard({ project }: { project: ProjectInterface }) {
     return (
         <motion.div 
-            className="bg-white rounded-lg shadow-md overflow-hidden"
+            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -19,12 +19,11 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
                     src={project.imageUrl}
                     alt={project.title} 
                     layout="fill"
-                    // objectFit="cover"
                 />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-gray-700 text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-gray-600 mb-4 flex-grow">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
                     <span key={tech} className="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">
@@ -32,7 +31,7 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
                     </span>
                     ))}
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between mt-auto">
                     <a 
                         href={project.githubUrl} 
                         target="_blank" 
