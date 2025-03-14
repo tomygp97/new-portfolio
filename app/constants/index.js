@@ -94,6 +94,12 @@ export const technologies = [
         ),
     },
     {
+        name: 'Redis',
+        icon: (
+            <Image src="/redis-svgrepo-com.svg" alt="Docker Logo" width={48} height={48} />
+        ),
+    },
+    {
         name: 'Git',
         icon: (
             <Image src="/git-icon-svgrepo-com.svg" alt="Git Logo" width={48} height={48} />
