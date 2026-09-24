@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import HomePage from './sections/Home'
 import Technologies from './sections/Technologies'
 import Contact from './sections/Contact'
-import WorkExperience from './sections/WorkExperiencec'
+import WorkExperience from './sections/WorkExperience'
 import Projects from './sections/Projects'
 
 
