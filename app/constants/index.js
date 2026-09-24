@@ -1,9 +1,17 @@
 import Image from "next/legacy/image"
 
-import comerciosanJuanBackground from "../../assets/projects/comerciosj-background.png"
-import jobifyBackground from "../../assets/projects/jobify-background.png"
-import lavappBackground from "../../assets/projects/lavapp-background.png"
-import bottoBackground from "../../assets/projects/botto-background.png"
+import comerciosanJuanBackground from "../../assets/projects/comerciosj-background.webp"
+import jobifyBackground from "../../assets/projects/jobify-background.webp"
+import lavappBackground from "../../assets/projects/lavapp-background.webp"
+import bottoBackground from "../../assets/projects/botto-background.webp"
+
+export const siteConfig = {
+    url: 'https://tomasgdev.com.ar',
+    name: 'Tomás Gutiérrez',
+    title: 'Tomás Gutiérrez | Full Stack Developer',
+    description: 'Full Stack Developer specializing in Golang, Laravel, Next.js, React and Node.js. Building scalable and efficient web applications with a strong focus on backend development.',
+    locale: 'en_US',
+}
 
 export const technologies = [
     {
@@ -187,7 +195,7 @@ export const contactInfo = [
             alt: 'Email Logo',
         },
         label: 'Email',
-        // href: 'mailto:tomasgp1997@gmail.com',
+        href: 'mailto:tomasgp1997@gmail.com',
         username: 'tomasgp1997@gmail.com',
     },
 ]
