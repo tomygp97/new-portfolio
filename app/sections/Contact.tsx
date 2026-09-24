@@ -57,7 +57,7 @@ export default function Contact() {
                             <button
                                 type="button"
                                 onClick={() => handleCopyEmail(item.username)}
-                                className="mb-3 inline-flex items-center gap-1 rounded px-3 py-2 text-sm text-gray-700 hover:text-blue-700"
+                                className="mb-3 inline-flex min-h-11 items-center gap-1 rounded px-3 text-sm text-gray-700 hover:text-blue-700"
                             >
                                 {copiedEmail ? <Check className="w-4 h-4" aria-hidden="true" /> : <Copy className="w-4 h-4" aria-hidden="true" />}
                                 {copiedEmail ? uiLabels.emailCopied : uiLabels.copyEmail}
