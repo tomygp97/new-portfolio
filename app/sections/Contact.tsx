@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Image from "next/legacy/image"
+import Image from "next/image"
 import { Copy, Check } from 'lucide-react'
 import { contactInfo } from '../constants'
 import SectionTitle from '../components/SectionTitle'

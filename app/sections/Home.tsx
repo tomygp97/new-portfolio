@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
-import Image from "next/legacy/image"
+import Image from "next/image"
 
 export default function Home() {
     return (
@@ -25,7 +25,8 @@ export default function Home() {
                         alt="Tomás Gutiérrez"
                         width={200}
                         height={200}
-                        className="rounded-full mx-auto border-4 border-white shadow-lg text-black"
+                        priority
+                        className="rounded-full mx-auto border-4 border-white shadow-lg"
                     />
                 </motion.div>
                 <motion.h1

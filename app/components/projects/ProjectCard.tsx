@@ -1,4 +1,4 @@
-import Image from "next/legacy/image"
+import Image from "next/image"
 import { motion } from 'framer-motion'
 
 import { ExternalLink } from 'lucide-react'
@@ -18,9 +18,9 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
                 <Image 
                     src={project.image}
                     alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="top"
+                    fill
+                    placeholder="blur"
+                    className="object-cover object-top"
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
             </div>
@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
                         rel="noopener noreferrer"
                         className="flex items-center text-gray-600 hover:text-blue-800 transition-colors duration-300 gap-1"
                     >
-                        <Image src="/github-svgrepo-com.svg" alt="GitHub Logo" width={20} height={20} className="" />
+                        <Image src="/github-svgrepo-com.svg" alt="" width={20} height={20} />
                         GitHub
                     </a>
                     <a 
