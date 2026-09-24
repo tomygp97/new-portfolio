@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
 
 export const hero: Hero = {
     role: 'Full Stack Developer',
-    pitch: 'Full Stack Developer with 2+ years of experience specializing in Golang, Laravel, Next.js, React.js and Node.js. Skilled in building scalable and efficient web applications, with a strong focus on backend development. Currently working as a Backend Developer at Nodos Hub, a software factory in Argentina.',
+    pitch: 'Full Stack Developer with 3+ years of experience specializing in Golang, Laravel, Next.js, React.js and Node.js. Skilled in building scalable and efficient web applications, with a strong focus on backend development. Currently working as a Full Stack Developer at PressLab, building the MVP of an early-stage startup.',
     photo: { src: '/Foto-Perfil.jpg', alt: 'Tomás Gutiérrez' },
     resume: { href: '/TomasGutierrezResume.pdf', label: 'Download Resume' },
 }
@@ -69,10 +69,22 @@ export const technologies: Technology[] = [
 
 export const experiences: Experience[] = [
     {
+        company: 'PressLab',
+        role: 'Full Stack Developer',
+        period: 'Dec 2025 - Present',
+        description: "Working on the development of an MVP for an early-stage startup, contributing to both frontend and backend. Involved in API design, feature development, and early architecture decisions in close collaboration with the team.",
+    },
+    {
+        company: 'Nilus',
+        role: 'Full Stack Developer',
+        period: 'May 2025 - Dec 2025',
+        description: "Developed and maintained REST APIs and microservices, contributing to system design and scalability. Worked in cloud-based and containerized environments, integrating monitoring and improving system reliability.",
+    },
+    {
         company: 'Nodos Hub',
         role: 'Backend Developer',
-        period: 'Oct 2024 - Present',
-        description: "I am participating in a backend development internship at Nodos Hub, a software factory based in San Juan, Argentina. My responsibilities include designing and implementing RESTful APIs and optimizing database structures using Laravel.",
+        period: 'Oct 2024 - Apr 2025',
+        description: "I participated in a backend development internship at Nodos Hub, a software factory based in San Juan, Argentina. My responsibilities included designing and implementing RESTful APIs and optimizing database structures using Laravel.",
     },
     {
         company: 'Victor Botto Maquinarias',
