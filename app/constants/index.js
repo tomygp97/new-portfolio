@@ -195,7 +195,7 @@ export const contactInfo = [
             alt: 'Email Logo',
         },
         label: 'Email',
-        // href: 'mailto:tomasgp1997@gmail.com',
+        href: 'mailto:tomasgp1997@gmail.com',
         username: 'tomasgp1997@gmail.com',
     },
 ]
