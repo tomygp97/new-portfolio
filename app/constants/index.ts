@@ -1,4 +1,4 @@
-import type { ContactItem, Experience, Project, SiteConfig, Technology } from "../types/content"
+import type { ContactItem, Experience, Hero, NavLink, Project, SectionTitles, SiteConfig, Technology, UiLabels } from "../types/content"
 
 import comerciosanJuanBackground from "../../assets/projects/comerciosj-background.webp"
 import jobifyBackground from "../../assets/projects/jobify-background.webp"
@@ -11,6 +11,39 @@ export const siteConfig: SiteConfig = {
     title: 'Tomás Gutiérrez | Full Stack Developer',
     description: 'Full Stack Developer specializing in Golang, Laravel, Next.js, React and Node.js. Building scalable and efficient web applications with a strong focus on backend development.',
     locale: 'en_US',
+}
+
+export const hero: Hero = {
+    role: 'Full Stack Developer',
+    pitch: 'Full Stack Developer with 2+ years of experience specializing in Golang, Laravel, Next.js, React.js and Node.js. Skilled in building scalable and efficient web applications, with a strong focus on backend development. Currently working as a Backend Developer at Nodos Hub, a software factory in Argentina.',
+    photo: { src: '/Foto-Perfil.jpg', alt: 'Tomás Gutiérrez' },
+    resume: { href: '/TomasGutierrezResume.pdf', label: 'Download Resume' },
+}
+
+export const navLinks: NavLink[] = [
+    { href: '#home', label: 'Home' },
+    { href: '#technologies', label: 'Technologies' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#contact', label: 'Contact' },
+]
+
+export const sectionTitles: SectionTitles = {
+    technologies: 'Technologies',
+    projects: 'Projects',
+    experience: 'Work Experience',
+    contact: 'Contact Me',
+}
+
+export const uiLabels: UiLabels = {
+    github: 'GitHub',
+    liveDemo: 'Live Demo',
+    copyEmail: 'Copy email',
+    emailCopied: 'Copied!',
+    emailCopiedAnnouncement: 'Email copied to clipboard',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    copyright: 'All rights reserved.',
 }
 
 export const technologies: Technology[] = [

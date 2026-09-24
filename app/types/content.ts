@@ -37,3 +37,33 @@ export type Project = {
     demoUrl: string
     image: StaticImageData
 }
+
+export type Hero = {
+    role: string
+    pitch: string
+    photo: { src: string; alt: string }
+    resume: { href: string; label: string }
+}
+
+export type NavLink = {
+    href: string
+    label: string
+}
+
+export type SectionTitles = {
+    technologies: string
+    projects: string
+    experience: string
+    contact: string
+}
+
+export type UiLabels = {
+    github: string
+    liveDemo: string
+    copyEmail: string
+    emailCopied: string
+    emailCopiedAnnouncement: string
+    openMenu: string
+    closeMenu: string
+    copyright: string
+}

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
 import Image from "next/image"
+import { hero, siteConfig } from '../constants'
 
 export default function Home() {
     return (
@@ -23,8 +24,8 @@ export default function Home() {
                     style={{ zIndex: 1}}
                 >
                     <Image
-                        src={"/Foto-Perfil.jpg"}
-                        alt="Tomás Gutiérrez"
+                        src={hero.photo.src}
+                        alt={hero.photo.alt}
                         width={200}
                         height={200}
                         priority
@@ -33,13 +34,13 @@ export default function Home() {
                 </motion.div>
                 {/* El texto del hero se renderiza visible desde el HTML para no retrasar el LCP */}
                 <h1 className="text-4xl font-bold mb-4 text-gray-100">
-                    Tomás Gutiérrez
+                    {siteConfig.name}
                 </h1>
                 <p className="text-xl mb-8 text-gray-300">
-                    Full Stack Developer
+                    {hero.role}
                 </p>
                 <p className="max-w-2xl mx-auto text-gray-300">
-                    Full Stack Developer with 2+ years of experience specializing in Golang, Laravel, Next.js, React.js and Node.js. Skilled in building scalable and efficient web applications, with a strong focus on backend development. Currently working as a Backend Developer at Nodos Hub, a software factory in Argentina.
+                    {hero.pitch}
                 </p>
                 <motion.div
                     className="mt-14"
@@ -48,12 +49,12 @@ export default function Home() {
                     transition={{ duration: 0.5 }}
                 >
                     <motion.a
-                        href="/TomasGutierrezResume.pdf"
+                        href={hero.resume.href}
                         className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"
                         whileHover={{ scale: 1.05 }}
                         download
                     >
-                        Download Resume
+                        {hero.resume.label}
                         <Download className="ml-2 w-6 h-6" aria-hidden="true" />
                     </motion.a>
                 </motion.div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { experiences } from "../constants";
+import { experiences, sectionTitles } from "../constants";
 import SectionTitle from "../components/SectionTitle";
 
 
@@ -10,7 +10,7 @@ export default function WorkExperience() {
         <section id="experience" className="py-20 bg-gray-100 min-h-screen">
             <div className="container mx-auto px-4">
             {/* <h2 className="text-3xl font-bold mb-8 text-center text-gray-600">Work Experience</h2> */}
-            <SectionTitle title="Work Experience" />
+            <SectionTitle title={sectionTitles.experience} />
             <div className="space-y-8">
                 {experiences.map((exp, index) => (
                     <motion.div

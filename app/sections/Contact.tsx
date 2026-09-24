@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from "next/image"
 import { Copy, Check } from 'lucide-react'
-import { contactInfo } from '../constants'
+import { contactInfo, sectionTitles, uiLabels } from '../constants'
 import SectionTitle from '../components/SectionTitle'
 
 export default function Contact() {
@@ -23,7 +23,7 @@ export default function Contact() {
     return (
         <section id="contact" className="py-20 bg-white">
             <div className="container mx-auto px-4">
-            <SectionTitle title="Contact Me" />
+            <SectionTitle title={sectionTitles.contact} />
             <motion.div
                 className="max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
@@ -58,12 +58,12 @@ export default function Contact() {
                                 className="mb-3 inline-flex items-center gap-1 rounded px-3 py-2 text-sm text-gray-700 hover:text-blue-700"
                             >
                                 {copiedEmail ? <Check className="w-4 h-4" aria-hidden="true" /> : <Copy className="w-4 h-4" aria-hidden="true" />}
-                                {copiedEmail ? 'Copied!' : 'Copy email'}
+                                {copiedEmail ? uiLabels.emailCopied : uiLabels.copyEmail}
                             </button>
                         )}
                         {isEmail && (
                             <span className="sr-only" aria-live="polite">
-                                {copiedEmail ? 'Email copied to clipboard' : ''}
+                                {copiedEmail ? uiLabels.emailCopiedAnnouncement : ''}
                             </span>
                         )}
                     </motion.div>
