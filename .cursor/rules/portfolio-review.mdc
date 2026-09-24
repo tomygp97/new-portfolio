@@ -1,0 +1,59 @@
+---
+description: Auditar el portfolio y proponer mejoras priorizadas antes de cambiar código
+alwaysApply: false
+---
+
+# Revisión del portfolio
+
+Objetivo: auditar el portfolio y entregar un informe priorizado de mejoras. **No modificar código en esta etapa** salvo que el usuario apruebe items concretos.
+
+Respondé en español.
+
+## 0. Contexto
+- Leé `AGENTS.md` (stack, estructura, reglas, deuda conocida) y `docs/profile.md` si existe.
+- Corré `npm ci` y `npm run build`; anotá warnings y tamaños de First Load JS.
+
+## 1. Verlo funcionando
+- Levantá `npm run dev` (o `npm run build && npm start`).
+- Si hay navegador o Playwright disponible, sacá capturas de página completa en **375px, 768px y 1440px**. Revisá overflow horizontal, textos cortados, solapamientos, tamaño de targets táctiles y navegación del header en móvil.
+- Si podés, corré Lighthouse (móvil) y anotá Performance, Accessibility, Best Practices y SEO.
+
+## 2. Checklist por área
+
+**Diseño / UX**
+- Jerarquía visual clara: ¿se entiende en 5 segundos quién es, qué hace y cómo contactarlo?
+- CTA principal visible arriba (contacto, CV, LinkedIn).
+- Consistencia de espaciados, tipografía y colores. Estética actual vs. anticuada.
+- Animaciones: aportan o molestan. ¿Respetan `prefers-reduced-motion`?
+- Dark/light mode si aplica.
+
+**Rendimiento**
+- Imágenes: peso, formato (WebP/AVIF), `next/image` vs `next/legacy/image`, `sizes`, `priority` solo en el hero.
+- JS: componentes marcados `'use client'` sin necesidad; tamaño de dependencias.
+- Fuentes con `next/font`.
+
+**SEO / compartir**
+- API `metadata` de Next (title, description, canonical), Open Graph/Twitter con imagen, `lang` correcto, `robots.txt`, `sitemap.xml`, favicon/manifest.
+
+**Accesibilidad**
+- HTML semántico (header/nav/main/section/footer, un solo h1, orden de headings).
+- `alt` útiles, `aria-label` en links-ícono, contraste AA, foco visible, navegación con teclado.
+
+**Código**
+- Contenido hardcodeado fuera de `app/constants`.
+- Tipado (constants en JS → TSX tipado), nombres de archivos con typos, código muerto, assets sin usar, duplicados.
+- Lint limpio.
+
+**Contenido**
+- Datos desactualizados comparando con `docs/profile.md`: rol, experiencia, proyectos, tecnologías, links y CV.
+- Demos rotas: verificá que cada `demoUrl` y `githubUrl` responda.
+- Tono y claridad de los textos; faltas de ortografía.
+
+## 3. Entregable
+Un informe (`docs/revision-portfolio.md`) con:
+1. **Resumen** en 3–5 líneas y puntajes de Lighthouse si los hay.
+2. **Tabla de hallazgos**: área, problema, evidencia (archivo:línea o captura), impacto (alto/medio/bajo), esfuerzo (S/M/L) y propuesta.
+3. **Plan por fases**: (a) quick wins, (b) mejoras técnicas, (c) rediseño o nuevas secciones (opcional), (d) actualización de contenido (se hace con la regla `portfolio-content-update`).
+4. **Preguntas abiertas** para el usuario.
+
+Terminá pidiendo al usuario que apruebe qué items implementar. Implementá solo lo aprobado, un tema por commit, con `npm run build` pasando.

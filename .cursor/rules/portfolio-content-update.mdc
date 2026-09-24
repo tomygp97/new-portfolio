@@ -1,0 +1,30 @@
+---
+description: Actualizar el contenido del portfolio desde docs/profile.md sin cambiar el diseño
+alwaysApply: false
+---
+
+# Actualización de contenido del portfolio
+
+Objetivo: dejar el contenido del sitio igual a `docs/profile.md`, sin tocar el diseño ni la estructura visual.
+
+Respondé en español.
+
+## Reglas
+- **Única fuente de verdad: `docs/profile.md`.** No inventes fechas, logros, métricas, tecnologías ni links. Si falta un dato o hay ambigüedad, preguntá antes de escribir.
+- Todo el contenido va en `app/constants/` (no hardcodeado en componentes).
+- No cambies estilos ni layout; si algo del contenido nuevo no entra bien en el diseño, avisá y proponé el ajuste mínimo.
+
+## Pasos
+1. Leé `AGENTS.md`, `docs/profile.md` y `app/constants/`.
+2. Armá un **diff de contenido** (qué se agrega, se modifica y se quita en cada sección: Home/pitch, tecnologías, proyectos, experiencia, contacto, CV) y mostralo al usuario para confirmar.
+3. Aplicá los cambios:
+   - **Home:** nombre, rol y pitch.
+   - **Experiencia:** orden cronológico inverso, logros concretos y verbos de acción.
+   - **Proyectos:** 3–5 como máximo. Para cada uno, verificá que la demo y el repo respondan. Imágenes nuevas en `assets/projects/` en WebP, idealmente menos de 300 KB, con `alt` descriptivo. Borrá las imágenes que ya no se usen.
+   - **Tecnologías:** según principales/secundarias del perfil. Íconos SVG en `public/` con nombres consistentes. Borrá los íconos que no se usen.
+   - **Contacto y links:** revisá email, LinkedIn y GitHub.
+   - **CV:** si el usuario da un PDF nuevo, reemplazalo en `public/` y actualizá todas las referencias.
+   - **Metadatos:** actualizá `title`, `description` y Open Graph acorde al nuevo rol.
+4. Revisá la ortografía y la consistencia del idioma (no mezclar es/en salvo que el sitio sea bilingüe).
+5. `npm run build` y `npm run lint` tienen que pasar. Si hay navegador disponible, sacá capturas en 375px y 1440px para verificar que nada se rompa.
+6. Resumí los cambios hechos y los datos que quedaron pendientes.
