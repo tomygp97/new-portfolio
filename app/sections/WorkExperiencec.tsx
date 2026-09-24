@@ -19,9 +19,9 @@ export default function WorkExperience() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                        <h3 className="text-xl font-semibold mb-2 text-gray-500">{exp.role}</h3>
-                        <p className="text-gray-500 mb-2">{exp.company} | {exp.period}</p>
-                        <p className="text-gray-400">{exp.description}</p>
+                        <h3 className="text-xl font-semibold mb-2 text-gray-700">{exp.role}</h3>
+                        <p className="text-gray-600 mb-2">{exp.company} | {exp.period}</p>
+                        <p className="text-gray-600">{exp.description}</p>
                     </motion.div>
                 ))}
             </div>

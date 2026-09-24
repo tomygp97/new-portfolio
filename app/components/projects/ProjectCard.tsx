@@ -45,7 +45,7 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
                         href={project.demoUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center text-green-600 hover:text-green-800 transition-colors duration-300"
+                        className="flex items-center text-green-700 hover:text-green-900 transition-colors duration-300"
                     >
                         <ExternalLink className="w-5 h-5 mr-2" />
                         Live Demo

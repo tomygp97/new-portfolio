@@ -27,7 +27,7 @@ export default function Technologies() {
                 {/* <h2 className="text-3xl font-bold mb-10 text-center text-gray-600" id="technologies">Technologies</h2> */}
                 <SectionTitle title="Technologies"/>
                 <motion.div
-                    className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-gray-400"
+                    className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-gray-600"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, staggerChildren: 0.1 }}
