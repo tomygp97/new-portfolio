@@ -7,18 +7,16 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <SectionTitle title={sectionTitles.projects} />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))} */}
-            {projects.map((project, index) => (
-              <div 
-                key={project.title} 
-                className={index === 3 ? "lg:col-start-2" : ""}
-              >
-                <ProjectCard project={project} />
-              </div>
-            ))}
+        {/* flex-wrap centra la última fila sin importar la cantidad de proyectos */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="w-full md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]"
+            >
+              <ProjectCard project={project} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

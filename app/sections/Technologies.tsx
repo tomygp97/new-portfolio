@@ -25,7 +25,6 @@ export default function Technologies() {
     return (
         <section id="technologies" className="py-20 bg-white">
             <div className="container mx-auto px-4">
-                {/* <h2 className="text-3xl font-bold mb-10 text-center text-gray-600" id="technologies">Technologies</h2> */}
                 <SectionTitle title={sectionTitles.technologies} />
                 <motion.div
                     className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-gray-600"

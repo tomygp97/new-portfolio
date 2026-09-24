@@ -9,7 +9,6 @@ export default function WorkExperience() {
         return (
         <section id="experience" className="py-20 bg-gray-100 min-h-screen">
             <div className="container mx-auto px-4">
-            {/* <h2 className="text-3xl font-bold mb-8 text-center text-gray-600">Work Experience</h2> */}
             <SectionTitle title={sectionTitles.experience} />
             <div className="space-y-8">
                 {experiences.map((exp, index) => (
