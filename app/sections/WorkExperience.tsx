@@ -16,9 +16,10 @@ export default function WorkExperience() {
                     <motion.div
                         key={`${exp.company}-${exp.period}`}
                         className="bg-white p-6 rounded-lg shadow-md z-10"
-                        whileHover={{ scale: 1.05, boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" }}
+                        whileHover={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" }}
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                         <h3 className="text-xl font-semibold mb-2 text-gray-700">{exp.role}</h3>

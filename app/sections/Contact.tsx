@@ -27,7 +27,8 @@ export default function Contact() {
             <motion.div
                 className="max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -39,7 +40,8 @@ export default function Contact() {
                         className="relative flex flex-col items-center bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-300 text-black"
                         whileHover={{ scale: 1.05 }}
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                         <a

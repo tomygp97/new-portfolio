@@ -10,7 +10,8 @@ function TechIcon({ icon, name }: { icon: string; name: string }) {
         <motion.div
             className="flex flex-col items-center"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.1 }}
             >
@@ -29,7 +30,8 @@ export default function Technologies() {
                 <motion.div
                     className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-gray-600"
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.5, staggerChildren: 0.1 }}
                     >
                     {technologies.map((tech) => (

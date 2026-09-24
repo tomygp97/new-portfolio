@@ -13,7 +13,8 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
         <motion.div 
             className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             whileHover={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" }}
         >
