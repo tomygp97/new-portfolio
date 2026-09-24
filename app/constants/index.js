@@ -1,9 +1,9 @@
 import Image from "next/legacy/image"
 
-import comerciosanJuanBackground from "../../assets/projects/comerciosj-background.png"
-import jobifyBackground from "../../assets/projects/jobify-background.png"
-import lavappBackground from "../../assets/projects/lavapp-background.png"
-import bottoBackground from "../../assets/projects/botto-background.png"
+import comerciosanJuanBackground from "../../assets/projects/comerciosj-background.webp"
+import jobifyBackground from "../../assets/projects/jobify-background.webp"
+import lavappBackground from "../../assets/projects/lavapp-background.webp"
+import bottoBackground from "../../assets/projects/botto-background.webp"
 
 export const siteConfig = {
     url: 'https://tomasgdev.com.ar',

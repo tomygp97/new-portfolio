@@ -8,7 +8,7 @@ export default function Home() {
             className="relative bg-gray-100 py-20 h-screen bg-cover bg-center"
             id='home'
             style={{
-                backgroundImage: 'url("/background.jpg")',
+                backgroundImage: 'url("/background.webp")',
             }}
         >
             <div className="container mx-auto px-4 text-center">
