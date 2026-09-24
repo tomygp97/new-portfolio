@@ -47,7 +47,7 @@ export default function Contact() {
                             {...(isEmail ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
                             className="flex flex-col items-center w-full p-4 rounded-lg"
                         >
-                            <Image src={item.icon.src} alt="" width={48} height={48} />
+                            <Image src={item.icon} alt="" width={48} height={48} />
                             <h3 className="text-lg font-semibold mt-2 text-gray-600">{item.label}</h3>
                             <p className="text-sm text-center text-gray-600">{item.username}</p>
                         </a>

@@ -1,11 +1,11 @@
 'use client'
 
-
 import { motion } from 'framer-motion'
+import Image from "next/legacy/image"
 import { technologies } from '../constants';
 import SectionTitle from '../components/SectionTitle';
 
-function TechIcon({ icon, name }: { icon: React.ReactNode; name: string }) {
+function TechIcon({ icon, name }: { icon: string; name: string }) {
     return (
         <motion.div
             className="flex flex-col items-center"
@@ -14,7 +14,7 @@ function TechIcon({ icon, name }: { icon: React.ReactNode; name: string }) {
             transition={{ duration: 0.5 }}
             whileHover={{ scale: 1.1 }}
             >
-            {icon}
+            <Image src={icon} alt="" width={48} height={48} />
             <span className="mt-2 text-sm">{name}</span>
         </motion.div>
     )

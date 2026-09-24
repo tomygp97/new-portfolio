@@ -2,7 +2,7 @@ import Image from "next/legacy/image"
 import { motion } from 'framer-motion'
 
 import { ExternalLink } from 'lucide-react'
-import { Project as ProjectInterface } from '@/app/types/project'
+import type { Project as ProjectInterface } from '@/app/types/content'
 
 
 export default function ProjectCard({ project }: { project: ProjectInterface }) {
@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
         >
             <div className="relative w-full h-48">
                 <Image 
-                    src={project.imageUrl}
+                    src={project.image}
                     alt={project.title}
                     layout="fill"
                     objectFit="cover"
