@@ -17,8 +17,11 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
             <div className="relative w-full h-48">
                 <Image 
                     src={project.imageUrl}
-                    alt={project.title} 
+                    alt={project.title}
                     layout="fill"
+                    objectFit="cover"
+                    objectPosition="top"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
             </div>
             <div className="p-6 flex flex-col flex-grow">
