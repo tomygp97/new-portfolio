@@ -5,6 +5,14 @@ import jobifyBackground from "../../assets/projects/jobify-background.png"
 import lavappBackground from "../../assets/projects/lavapp-background.png"
 import bottoBackground from "../../assets/projects/botto-background.png"
 
+export const siteConfig = {
+    url: 'https://tomasgdev.com.ar',
+    name: 'Tomás Gutiérrez',
+    title: 'Tomás Gutiérrez | Full Stack Developer',
+    description: 'Full Stack Developer specializing in Golang, Laravel, Next.js, React and Node.js. Building scalable and efficient web applications with a strong focus on backend development.',
+    locale: 'en_US',
+}
+
 export const technologies = [
     {
         name: 'Golang',
