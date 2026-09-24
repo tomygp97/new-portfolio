@@ -50,9 +50,9 @@ docs/profile.md        # fuente de verdad de los datos personales (crear si no e
 ## Flujo de Git
 
 - `main` = producción (Netlify despliega a tudominio.com). **Nunca commitear ni pushear directo a `main`.**
-- `develop` = integración. Netlify publica un preview en `develop--<sitio>.netlify.app`.
-- Para cada tarea: partir de `develop` actualizado → rama `feat/...`, `fix/...` o `chore/...` → commits chicos → merge (o PR) a `develop`.
-- Pasar `develop` → `main` **solo cuando el usuario lo pida explícitamente**, después de revisar el preview.
+- `development` = integración. Netlify publica un preview en `development--<sitio>.netlify.app`.
+- Para cada tarea: partir de `development` actualizado → rama `feat/...`, `fix/...` o `chore/...` → commits chicos → merge (o PR) a `development`.
+- Pasar `development` → `main` **solo cuando el usuario lo pida explícitamente**, después de revisar el preview.
 - Antes de cambiar de rama, verificar `git status` limpio. No usar `push --force` ni reescribir historia de ramas compartidas.
 
 ## Deuda conocida (a resolver en la revisión)
