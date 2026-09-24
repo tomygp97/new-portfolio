@@ -1,8 +1,11 @@
-import Image from "next/legacy/image"
+'use client'
+
+import Image from "next/image"
 import { motion } from 'framer-motion'
 
 import { ExternalLink } from 'lucide-react'
-import { Project as ProjectInterface } from '@/app/types/project'
+import type { Project as ProjectInterface } from '@/app/types/content'
+import { uiLabels } from '@/app/constants'
 
 
 export default function ProjectCard({ project }: { project: ProjectInterface }) {
@@ -10,17 +13,18 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
         <motion.div 
             className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             whileHover={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" }}
         >
             <div className="relative w-full h-48">
                 <Image 
-                    src={project.imageUrl}
+                    src={project.image}
                     alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="top"
+                    fill
+                    placeholder="blur"
+                    className="object-cover object-top"
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
             </div>
@@ -39,19 +43,19 @@ export default function ProjectCard({ project }: { project: ProjectInterface }) 
                         href={project.githubUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center text-gray-600 hover:text-blue-800 transition-colors duration-300 gap-1"
+                        className="flex items-center py-2.5 text-gray-600 hover:text-blue-800 transition-colors duration-300 gap-1"
                     >
-                        <Image src="/github-svgrepo-com.svg" alt="GitHub Logo" width={20} height={20} className="" />
-                        GitHub
+                        <Image src="/github-svgrepo-com.svg" alt="" width={20} height={20} />
+                        {uiLabels.github}
                     </a>
                     <a 
                         href={project.demoUrl} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex items-center text-green-700 hover:text-green-900 transition-colors duration-300"
+                        className="flex items-center py-2.5 text-green-700 hover:text-green-900 transition-colors duration-300"
                     >
                         <ExternalLink className="w-5 h-5 mr-2" />
-                        Live Demo
+                        {uiLabels.liveDemo}
                     </a>
                 </div>
             </div>

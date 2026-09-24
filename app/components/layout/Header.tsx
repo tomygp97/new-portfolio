@@ -2,14 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link'
-
-const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#technologies', label: 'Technologies' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#contact', label: 'Contact' },
-]
+import { navLinks, siteConfig, uiLabels } from '../../constants'
 
 export default function Header() {
     const [isTransparent, setIsTransparent] = useState(true);
@@ -42,12 +35,12 @@ export default function Header() {
         <header className={`fixed top-0 left-0 right-0 text-white py-2 z-50 transition-colors duration-300 ${isHeaderTransparent ? 'bg-transparent' : 'bg-[#3E3B3C]'}`}>
             <nav aria-label="Main" className="container mx-auto px-4 flex justify-between items-center">
                 <Link href="/" className="text-2xl font-bold py-2">
-                    Tomás Gutiérrez
+                    {siteConfig.name}
                 </Link>
                 <button
                     type="button"
                     onClick={toggleMenu}
-                    aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                    aria-label={isMenuOpen ? uiLabels.closeMenu : uiLabels.openMenu}
                     aria-expanded={isMenuOpen}
                     aria-controls="main-menu"
                     className="md:hidden -mr-2 flex h-11 w-11 items-center justify-center rounded"

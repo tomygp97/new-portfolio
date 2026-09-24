@@ -12,18 +12,18 @@ Landing personal / portfolio. **Solo frontend estático**: sin backend, sin API 
 - Tailwind CSS 3
 - Framer Motion (animaciones)
 - `lucide-react` y `react-icons` (íconos)
-- `@svgr/webpack` configurado en `next.config.js` (los `.svg` importados se vuelven componentes)
+- Metadata con la API `metadata` de Next; `opengraph-image.png`, `apple-icon.png`, `robots.ts` y `sitemap.ts` en `app/`
 
 ## Estructura
 
 ```
 app/
-  layout.tsx          # layout raíz, <head>, fuente Inter (next/font/google)
-  page.tsx            # compone las secciones en orden
-  sections/           # Home, Technologies, Projects, WorkExperience(c), Contact
-  components/         # layout/ (Header, Footer), projects/ProjectCard, SectionTitle
-  constants/index.js  # TODO el contenido: technologies, experiences, contactInfo, projects
-  types/project.ts    # tipo Project
+  layout.tsx          # layout raíz, metadata SEO/OG, fuente Inter (next/font/google), MotionProvider
+  page.tsx            # server component: compone las secciones en orden
+  sections/           # Home, Technologies, Projects, WorkExperience, Contact ('use client' si usan motion)
+  components/         # layout/ (Header, Footer), projects/ProjectCard, SectionTitle, MotionProvider
+  constants/index.ts  # TODO el contenido (datos, sin JSX): siteConfig, hero, navLinks, technologies, experiences, contactInfo, projects, textos de UI
+  types/content.ts    # tipos de todo el contenido
 assets/projects/      # imágenes de proyectos (importadas desde constants)
 public/               # íconos SVG, foto de perfil, background, CV en PDF
 docs/profile.md        # fuente de verdad de los datos personales (crear si no existe)
@@ -49,18 +49,14 @@ docs/profile.md        # fuente de verdad de los datos personales (crear si no e
 
 ## Flujo de Git
 
-- `main` = producción (Netlify despliega a tudominio.com). **Nunca commitear ni pushear directo a `main`.**
+- `main` = producción (Netlify despliega a https://tomasgdev.com.ar). **Nunca commitear ni pushear directo a `main`.**
 - `development` = integración. Netlify publica un preview en `development--<sitio>.netlify.app`.
 - Para cada tarea: partir de `development` actualizado → rama `feat/...`, `fix/...` o `chore/...` → commits chicos → merge (o PR) a `development`.
 - Pasar `development` → `main` **solo cuando el usuario lo pida explícitamente**, después de revisar el preview.
 - Antes de cambiar de rama, verificar `git status` limpio. No usar `push --force` ni reescribir historia de ramas compartidas.
 
-## Deuda conocida (a resolver en la revisión)
+## Deuda conocida
 
-- `app/sections/WorkExperiencec.tsx` tiene un typo en el nombre.
-- `app/constants/index.js` es JS con JSX; conviene pasarlo a `.tsx` y tiparlo.
-- `constants` usa `next/legacy/image`.
-- `assets/projects/botto-background.png` pesa ~4 MB.
-- Metadatos pobres: `<title>` "Tomi Portfolio" en `<head>` manual, sin description ni Open Graph (usar la API `metadata` de Next).
-- `page.tsx` es `'use client'` completo solo por la animación de entrada.
-- Hay dos favicons (`favicon.ico` y `favicon2.ico`) y `public/background.jpg` pesa ~520 KB.
+- Next 14.2.x tiene advisories que solo se resuelven con Next 15/16 (cambio de major, pendiente de decisión).
+- Los links de proyectos de ComercioSJ y LavApp están caídos hasta migrarlos a Netlify.
+- Contenido personal desactualizado hasta completar `docs/profile.md` (fase D de la revisión).
